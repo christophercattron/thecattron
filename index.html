@@ -27,43 +27,49 @@ div.desc {
 <body>
 
 <div class="gallery">
-  <img onclick="playAudio()" src="./resources/images/thecattron.jpg" id="" alt="" width="400" height="400">
+  <img onclick="playAudio1()" src="./resources/images/thecattron.jpg" id="" alt="" width="400" height="400">
   <div class="desc">TheCatTron</div>
 </div>
-
 <div class="gallery">
-  <a target="_blank" href="">
-    <img src="" alt="" width="600" height="400">
-  </a>
-  <div class="desc"></div>
+  <img onclick="playAudio2()" src="./resources/images/joedannyman.jpg" id="" alt="" width="400" height="400">
+  <div class="desc">JoeDannyMan</div>
 </div>
-
 <div class="gallery">
-  <a target="_blank" href="">
-    <img src="" alt="" width="600" height="400">
-  </a>
-  <div class="desc"></div>
+  <img onclick="playAudio3()" src="./resources/images/xadiu.jpg" id="" alt="" width="400" height="400">
+  <div class="desc">Xadiu</div>
 </div>
-
 <div class="gallery">
-  <a target="_blank" href="">
-    <img src="" alt="" width="600" height="400">
-  </a>
-  <div class="desc"></div>
+  <img onclick="playAudio4()" src="./resources/images/me-and-the-boys.jpg" id="" alt="" width="400" height="400">
+  <div class="desc">Me and the Boys</div>
 </div>
 
 </body>
 
 <script>
-  function playAudio() {
+  function playAudio1() {
       var audio = document.getElementById("thecattron");
+      audio.play();
+  }
+  function playAudio2() {
+      var audio = document.getElementById("joedannyman");
+      audio.play();
+  }
+  function playAudio3() {
+      var audio = document.getElementById("xadiu");
+      audio.play();
+  }
+  function playAudio4() {
+      var audio = document.getElementById("me-and-the-boys");
       audio.play();
   }
 </script>
 
-<input type="button" value="Click to play noise" onclick="playAudio()" />
 
 <audio id="thecattron" src="resources/audio/thecattron.wav"></audio>
+<audio id="joedannyman" src="resources/audio/joedannyman.wav"></audio>
+<audio id="xadiu" src="resources/audio/xadiu.wav"></audio>
+<audio id="me-and-the-boys" src="resources/audio/me-and-the-boys.wav"></audio>
+
 
 </html>
 
