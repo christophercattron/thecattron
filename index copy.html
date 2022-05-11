@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+ 
+
+    
+
+     <audio id="applause" src="./resources/audio/joedannyman.wav">
+  
+     </audio>
+     <audio id="boo" src="./resources/audio/thecattron.wav">
+  
+     </audio>
+     <audio id="gasp" src="./resources/audio/me-and-the-boys.wav">
+  
+     </audio>
+     <audio id="tada" src="./resources/audio/xadiu.wav">
+  
+     </audio>
+     <audio  id="victory" src="./resources/audio/now-thats-a-penis.wav">
+  
+     </audio>
+     <audio id="wrong" src="./resources/audio/lotsoflinesneedtoedit.wav">
+  
+     </audio>
+  
+      <div id ="button"></div>
+
+
+
+
+<div class="gallery">
+  <img onclick="playAudio1()" src="./resources/images/thecattron.jpg" id="" alt="" width="400" height="400">
+  <div class="desc">TheCatTron</div>
+</div>
+<div class="gallery">
+  <img onclick="playAudio2()" src="./resources/images/joedannyman.jpg" id="" alt="" width="400" height="400">
+  <div class="desc">JoeDannyMan</div>
+</div>
+<div class="gallery">
+  <img onclick="playAudio3()" src="./resources/images/xadiu.jpg" id="" alt="" width="400" height="400">
+  <div class="desc">Xadiu</div>
+</div>
+<div class="gallery">
+  <img onclick="playAudio4()" src="./resources/images/me-and-the-boys.jpg" id="" alt="" width="400" height="400">
+  <div class="desc">Me and the Boys</div>
+</div>
+
+</body>
+
+<script>
+
+const sounds = ['applause','boo','gasp','tada','victory','wrong']
+
+
+sounds.forEach(sound => {
+    const btn = document.createElement('button')
+    btn.classList.add('btn');
+
+    btn.innerText= sound;
+
+    btn.addEventListener('click',()=>{
+      stopsongs()
+      document.getElementById(sound).play()
+
+    })
+
+    document.getElementById('button').appendChild(btn)
+});
+
+
+function stopsongs(){
+  sounds.forEach(sound => {
+       const song = document.getElementById(sound)
+       song.pause()
+       song.currentTime=0;
+  });
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  function playAudio1() {
+      var audio = document.getElementById("thecattron");
+      audio.play();
+  }
+  function playAudio2() {
+      var audio = document.getElementById("joedannyman");
+      audio.play();
+  }
+  function playAudio3() {
+      var audio = document.getElementById("xadiu");
+      audio.play();
+  }
+  function playAudio4() {
+      var audio = document.getElementById("me-and-the-boys");
+      audio.play();
+  }
+</script>
+
+
+<audio id="thecattron" src="resources/audio/thecattron.wav"></audio>
+<audio id="joedannyman" src="resources/audio/joedannyman.wav"></audio>
+<audio id="xadiu" src="resources/audio/xadiu.wav"></audio>
+<audio id="me-and-the-boys" src="resources/audio/me-and-the-boys.wav"></audio>
+
+
+</html>
+
+
